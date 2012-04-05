@@ -1,0 +1,1745 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Tue Apr 03 22:57:04 -0700 2012
+Served asset /rails.png - 200 OK (4ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (22.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (18.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSuggestions (20120405013211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "suggestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120405013211')
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("suggestions")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSuggestions (20120405013211)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "suggestions"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120405013211'
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSuggestions (20120405013211)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSuggestions (20120405013211)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "suggestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120405013211')[0m
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("suggestions")[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-04-04 18:42:33 -0700
+Served asset /rails.png - 304 Not Modified (12ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:42:43 -0700
+
+ActionController::RoutingError (No route matches [GET] "/suggestions/new"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:43:17 -0700
+
+ActionController::RoutingError (No route matches [GET] "/suggestions/new"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:43:23 -0700
+
+ActionController::RoutingError (No route matches [GET] "/suggestions/new"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:43:42 -0700
+
+ActionController::RoutingError (No route matches [GET] "/suggestions/new"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:44:36 -0700
+Processing by SuggestionsController#new as HTML
+Completed 500 Internal Server Error in 96ms
+
+ActionView::MissingTemplate (Missing template suggestions/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/dan/suggest/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__810703637858443965__process_action__2275466481940895239__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1671152593336675389__call__3907531182025213233__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (7.5ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:44:37 -0700
+Processing by SuggestionsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActionView::MissingTemplate (Missing template suggestions/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/dan/suggest/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__810703637858443965__process_action__2275466481940895239__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1671152593336675389__call__3907531182025213233__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:45:43 -0700
+Processing by SuggestionsController#new as HTML
+Completed 500 Internal Server Error in 97ms
+
+ActionView::MissingTemplate (Missing template suggestions/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/dan/suggest/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__787463092330643973__process_action__2827695481238637556__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__2618079301529115693__call__2022342853785234884__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (7.8ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:47:34 -0700
+Processing by SuggestionsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActionView::MissingTemplate (Missing template suggestions/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/dan/suggest/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__787463092330643973__process_action__2827695481238637556__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__2618079301529115693__call__2022342853785234884__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:47:56 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (1.8ms)
+Compiled suggestions.css  (11ms)  (pid 74771)
+Compiled application.css  (18ms)  (pid 74771)
+Compiled jquery.js  (1ms)  (pid 74771)
+Compiled jquery_ujs.js  (0ms)  (pid 74771)
+Compiled suggestions.js  (159ms)  (pid 74771)
+Compiled application.js  (202ms)  (pid 74771)
+Completed 200 OK in 355ms (Views: 310.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:47:57 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:47:57 -0700
+Served asset /suggestions.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:47:57 -0700
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:47:57 -0700
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:47:57 -0700
+Served asset /suggestions.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:47:57 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:49:19 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00000105d5a9c0>):
+    1: %h3 Suggest something to someone
+    2: 
+    3: = form_for @suggestion do |f|
+    4:   = f.input :description
+  app/views/suggestions/new.html.haml:4:in `block in _app_views_suggestions_new_html_haml__3984638602979998007_2197199300'
+  app/views/suggestions/new.html.haml:3:in `_app_views_suggestions_new_html_haml__3984638602979998007_2197199300'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:49:46 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `text_input' for #<ActionView::Helpers::FormBuilder:0x0000010418f920>):
+    1: %h3 Suggest something to someone
+    2: 
+    3: = form_for @suggestion do |f|
+    4:   = f.text_input :description
+  app/views/suggestions/new.html.haml:4:in `block in _app_views_suggestions_new_html_haml__3984638602979998007_2183116520'
+  app/views/suggestions/new.html.haml:3:in `_app_views_suggestions_new_html_haml__3984638602979998007_2183116520'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:49:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (53.6ms)
+Completed 200 OK in 80ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:50:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:52:00 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `emails' for #<Suggestion:0x00000105aaffe0>):
+    5:   = f.text_field :description
+    6: 
+    7:   = f.label "To whom?"
+    8:   = f.text_field :emails
+    9: 
+    10:   = f.submit
+  app/views/suggestions/new.html.haml:8:in `block in _app_views_suggestions_new_html_haml__3984638602979998007_2195017440'
+  app/views/suggestions/new.html.haml:3:in `_app_views_suggestions_new_html_haml__3984638602979998007_2195017440'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:52:05 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `emails' for #<Suggestion:0x00000104642210>):
+    5:   = f.text_field :description
+    6: 
+    7:   = f.label "To whom?"
+    8:   = f.text_field :emails
+    9: 
+    10:   = f.submit
+  app/views/suggestions/new.html.haml:8:in `block in _app_views_suggestions_new_html_haml__3984638602979998007_2195017440'
+  app/views/suggestions/new.html.haml:3:in `_app_views_suggestions_new_html_haml__3984638602979998007_2195017440'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:52:07 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `emails' for #<Suggestion:0x00000100dd6f98>):
+    5:   = f.text_field :description
+    6: 
+    7:   = f.label "To whom?"
+    8:   = f.text_field :emails
+    9: 
+    10:   = f.submit
+  app/views/suggestions/new.html.haml:8:in `block in _app_views_suggestions_new_html_haml__3984638602979998007_2195017440'
+  app/views/suggestions/new.html.haml:3:in `_app_views_suggestions_new_html_haml__3984638602979998007_2195017440'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSuggestions (20120405013211)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "suggestions"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120405013211'
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSuggestions (20120405013211)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "suggestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "emails" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120405013211')[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("suggestions")[0m
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:34 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:53:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:55:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 18:55:26 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"youtube", "emails"=>"a@a.com"}, "commit"=>"Create Suggestion"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: utf8, authenticity_token, suggestion, commit, action, controller):
+  app/controllers/suggestions_controller.rb:4:in `new'
+  app/controllers/suggestions_controller.rb:4:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 18:56:01 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"youtube", "emails"=>"a@a.com"}, "commit"=>"Create Suggestion"}
+Completed 500 Internal Server Error in 5ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"suggestions", :id=>#<Suggestion id: nil, description: "youtube", emails: "a@a.com", created_at: nil, updated_at: nil>}):
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 18:56:30 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"youtube", "emails"=>"a@a.com"}, "commit"=>"Create Suggestion"}
+Completed 500 Internal Server Error in 5ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"suggestions"}):
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 18:57:29 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"youtube", "emails"=>"a@a.com"}, "commit"=>"Create Suggestion"}
+Completed 500 Internal Server Error in 1ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"suggestions"}):
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:57:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 18:57:39 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"youtube", "emails"=>"d@a.com"}, "commit"=>"Create Suggestion"}
+Completed 500 Internal Server Error in 1ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"suggestions"}):
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 18:57:55 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"youtube", "emails"=>"d@a.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.7ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 01:57:55 UTC +00:00], ["description", "youtube"], ["emails", "d@a.com"], ["updated_at", Thu, 05 Apr 2012 01:57:55 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/suggestions/1
+Completed 302 Found in 43ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/suggestions/1" for 127.0.0.1 at 2012-04-04 18:57:55 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template suggestions/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/dan/suggest/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__3217154272627622190__process_action__2862705228111014410__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1186974997833413007__call__65214204274237244__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/dan/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/suggestions/1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuggestion Load (0.1ms)[0m  [1mSELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 18:58:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/suggestions/new" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Processing by SuggestionsController#new as HTML
+  Rendered suggestions/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:06:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:06:36 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Apr 2012 02:06:36 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:06:36 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered suggestion_mailer/suggestion_email.html.haml (1.2ms)
+Completed 500 Internal Server Error in 545ms
+
+ActionView::Template::Error (undefined method `description' for nil:NilClass):
+    1: = "You should check this out: #{@suggestion.description}"
+  app/views/suggestion_mailer/suggestion_email.html.haml:1:in `_app_views_suggestion_mailer_suggestion_email_html_haml__645319667490156010_2194478660'
+  app/mailers/suggestion_mailer.rb:6:in `suggestion_email'
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:07:05 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+Completed 500 Internal Server Error in 0ms
+
+RuntimeError ({"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion", "action"=>"create", "controller"=>"suggestions"}):
+  app/controllers/suggestions_controller.rb:4:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.4ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:07:22 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:07:22 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:07:22 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 10ms
+
+RuntimeError (#<Suggestion id: 3, description: "xkcd.com", emails: "daniel.rufener@gmail.com", created_at: "2012-04-05 02:07:22", updated_at: "2012-04-05 02:07:22">):
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:07:45 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 05 Apr 2012 02:07:45 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:07:45 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.6ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `description' for nil:NilClass):
+    1: = "You should check this out: #{@suggestion.description}"
+  app/views/suggestion_mailer/suggestion_email.html.haml:1:in `_app_views_suggestion_mailer_suggestion_email_html_haml__645319667490156010_2194478660'
+  app/mailers/suggestion_mailer.rb:6:in `suggestion_email'
+  app/controllers/suggestions_controller.rb:5:in `create'
+
+
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dan/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:09:24 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:09:24 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.7ms)
+
+Sent mail to daniel.rufener@gmail.com (40ms)
+Date: Wed, 04 Apr 2012 19:09:24 -0700
+From: from@example.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7cfed454ec0_12413825af76c494ed@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: xkcd.com
+
+Redirected to http://localhost:3000/suggestions/5
+Completed 302 Found in 76ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/suggestions/5" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:09:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:11:51 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:11:52 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:11:52 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.8ms)
+
+Sent mail to daniel.rufener@gmail.com (38ms)
+Date: Wed, 04 Apr 2012 19:11:52 -0700
+From: from@example.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7cff68c22a3_124a580632c2c7689e@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: xkcd.com
+
+Redirected to http://localhost:3000/suggestions/6
+Completed 302 Found in 662ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/suggestions/6" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Served asset /suggestions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Served asset /suggestions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:11:52 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:13:16 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:13:16 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.1ms)
+
+Sent mail to daniel.rufener@gmail.com (6ms)
+Date: Wed, 04 Apr 2012 19:13:16 -0700
+From: daniel.rufener@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7cffbcb304a_124a581a4356876973@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: xkcd.com
+
+Redirected to http://localhost:3000/suggestions/7
+Completed 302 Found in 28ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/suggestions/7" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:13:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:15:37 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"xkcd.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:15:39 UTC +00:00], ["description", "xkcd.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:15:39 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.8ms)
+
+Sent mail to daniel.rufener@gmail.com (1436ms)
+Date: Wed, 04 Apr 2012 19:15:39 -0700
+From: daniel.rufener@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7d004bafb03_124ce81443bb822728@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: xkcd.com
+
+Redirected to http://localhost:3000/suggestions/8
+Completed 302 Found in 2065ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/suggestions/8" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Served asset /suggestions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Served asset /suggestions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:15:41 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:17:06 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"1", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:17:06 UTC +00:00], ["description", "1"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:17:06 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.1ms)
+
+Sent mail to daniel.rufener@gmail.com (1233ms)
+Date: Wed, 04 Apr 2012 19:17:06 -0700
+From: daniel.rufener@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7d00a294f05_124ce8160994822857@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: 1
+
+Redirected to http://localhost:3000/suggestions/9
+Completed 302 Found in 1269ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/suggestions/9" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mSuggestion Load (0.1ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "9"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:17:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:26:48 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"2", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:26:48 UTC +00:00], ["description", "2"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:26:48 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.8ms)
+
+Sent mail to daniel.rufener@gmail.com (2608ms)
+Date: Wed, 04 Apr 2012 19:26:49 -0700
+From: daniel.rufener@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7d02e9d72_124e681d3328c812b9@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: 2
+
+Redirected to http://localhost:3000/suggestions/10
+Completed 302 Found in 2803ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/suggestions/10" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered suggestions/show.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Served asset /suggestions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Served asset /suggestions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:26:51 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:32:09 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"test", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:32:09 UTC +00:00], ["description", "test"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:32:09 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.1ms)
+
+Sent mail to daniel.rufener@gmail.com (2059ms)
+Date: Wed, 04 Apr 2012 19:32:09 -0700
+From: daniel.rufener@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7d0429e7372_124e6829ec29481322@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: test
+
+Redirected to http://localhost:3000/suggestions/11
+Completed 302 Found in 2070ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/suggestions/11" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mSuggestion Load (0.1ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "11"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:32:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:33:12 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"www.google.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:33:12 UTC +00:00], ["description", "www.google.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:33:12 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.1ms)
+
+Sent mail to daniel.rufener@gmail.com (1764ms)
+Date: Wed, 04 Apr 2012 19:33:12 -0700
+From: suggest12345@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7d0468c4cdc_124e682b7e3b48145e@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: www.google.com
+
+Redirected to http://localhost:3000/suggestions/12
+Completed 302 Found in 1786ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/suggestions/12" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Served asset /suggestions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Served asset /suggestions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/suggestions" for 127.0.0.1 at 2012-04-04 19:33:55 -0700
+Processing by SuggestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDHF6w1UXGrrtxmQioflbc7BpW9557SYuY2uNIuZFks=", "suggestion"=>{"description"=>"test.com", "emails"=>"daniel.rufener@gmail.com"}, "commit"=>"Create Suggestion"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.3ms)[0m  INSERT INTO "suggestions" ("created_at", "description", "emails", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 05 Apr 2012 02:33:56 UTC +00:00], ["description", "test.com"], ["emails", "daniel.rufener@gmail.com"], ["updated_at", Thu, 05 Apr 2012 02:33:56 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  Rendered suggestion_mailer/suggestion_email.html.haml (0.8ms)
+
+Sent mail to daniel.rufener@gmail.com (2013ms)
+Date: Wed, 04 Apr 2012 19:33:56 -0700
+From: suggest12345@gmail.com
+To: daniel.rufener@gmail.com
+Message-ID: <4f7d04943060e_12535826f0c8460632@Dan-Rufeners-MacBook-Pro.local.mail>
+Subject: Somone suggested something to you!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You should check this out: test.com
+
+Redirected to http://localhost:3000/suggestions/13
+Completed 302 Found in 2210ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/suggestions/13" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Processing by SuggestionsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mSuggestion Load (0.2ms)[0m  SELECT "suggestions".* FROM "suggestions" WHERE "suggestions"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered suggestions/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/suggestions.css?body=1" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Served asset /suggestions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/suggestions.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Served asset /suggestions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 19:33:58 -0700
+Served asset /application.js - 304 Not Modified (4ms)

@@ -1,0 +1,10 @@
+%h3 Suggest something to someone
+
+= form_for @suggestion do |f|
+  = f.label "Suggest what?"
+  = f.text_field :description
+  %br
+  = f.label "To whom?"
+  = f.text_field :emails
+  %br
+  = f.submit
